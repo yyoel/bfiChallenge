@@ -112,6 +112,21 @@ Try connect to the host that you already configure
 
     [Link to Repo](https://github.com/yyoel/bfi_engine2)
 
-4. To run the apps start by doing
-    - > mvn package
-    - > java -jar /target/*.jar
+4. Update the application properties, it's located in
+    - > /src/main/resources/application.properties
+    - > spring.kafka.bootstrap-servers=your_public_ip:9092
+    - > spring.datasource.url=jdbc:mysql://    your_public_ip:3306/db_example
+        spring.datasource.username=springuser
+        spring.datasource.password=ThePassword
+
+5. To run the apps start by doing
+    - BFI API
+        - > mvn package
+        - > java -jar target/*.jar
+        - Send the json data through Postman ![alt](./images/json.png)
+    - BFI Engine 1
+        - > mvn package
+        - > java -jar target/*.jar
+    - BFI Engine 2
+        - > mvn package
+        - > java -jar target/*.jar
