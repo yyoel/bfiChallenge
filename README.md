@@ -88,8 +88,8 @@ Try connect to the host that you already configure
     - Edit the cnf file so that your MySQL is accessible from the internet
         - > sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
             - Change bind address
-                - > bind-address           = 0.0.0.0
-        - Restart MySQL Service 
+                - > bind-address = 0.0.0.0
+        - Restart MySQL Service
             - > sudo systemctl restart mysql
         - Access to MySQL
             - > sudo mysql
@@ -130,3 +130,7 @@ Try connect to the host that you already configure
     - BFI Engine 2
         - > mvn package
         - > java -jar target/*.jar
+        - Check if data were stored
+            - > sudo mysql
+            - > use db_example;
+            - > select * from transaction_model;
