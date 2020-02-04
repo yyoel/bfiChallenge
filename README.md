@@ -83,6 +83,21 @@ Try connect to the host that you already configure
         - > confluent local start
         - It'll show the engine were starting ![alt](./images/running_confluent.png)
 
+5. Installing [MySQL](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-16-04)
+    - > sudo apt-get install mysql-server
+    - Edit the cnf file so that your MySQL is accessible from the internet
+        - > sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+            - Change bind address
+                - > bind-address           = 0.0.0.0
+        - Restart MySQL Service 
+            - > sudo systemctl restart mysql
+        - Access to MySQL
+            - > sudo mysql
+        - Create database and new user for your apps
+            - > create database db_example;
+            - > create user 'springuser'@'%' identified by 'ThePassword';
+            - > grant all on db_example.* to 'springuser'@'%';
+
 ### Run the Apps
 
 1. BFI API
