@@ -43,6 +43,6 @@
 
 5. Open remote host window
 ![alt](./images/remote_host_icon.png)
-and then **Remote-SSH: Connect to Host...**
+    and then **Remote-SSH: Connect to Host...**
 
 6. 
