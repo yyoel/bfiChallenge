@@ -43,6 +43,10 @@
 
 5. Open remote host window
 ![alt](./images/remote_host_icon.png)
-    and then **Remote-SSH: Connect to Host...**
+And choose **Remote-SSH: Connect to Host...** after that choose **Configure SSH Host...**
 
-6. 
+6. Configure it like this
+![alt](./images/your_public_ip.png)
+Try connect to the host that you already configure
+
+8.
