@@ -1,15 +1,18 @@
 # Prerequisites
 
-1. Cloud Provider Account (the step bellow will be using GCP)
+1. A laptop or a PC (better with a Linux or Mac OS)
+
+2. Cloud Provider Account (the step bellow will be using GCP)
     - Create VM
     - Add local SSH key to VM
 
-2. Editor & Remote SSH (VSCode)
+3. Editor & Remote SSH (VSCode)
     - SSH to VM
     - Install SDK Man
-    - Intall Java from SDK Man
+    - Install Java from SDK Man
     - Install Maven from SDK Man
     - Install Confluent (Community Edition)
+    - Install MySQL
     - Run BFI_API
     - Run BFI_Engine1
     - Run BFI_Engine2
@@ -76,3 +79,24 @@ Try connect to the host that you already configure
     - > sudo apt-get update && sudo apt-get install confluent-community-2.12
     - For the Confluent CLI
         - > curl -L <https://cnfl.io/cli> | sh -s -- -b /usr/local/bin
+    - Start the local confluent
+        - > confluent local start
+        - It'll show the engine were starting ![alt](./images/running_confluent.png)
+
+### Run the Apps
+
+1. BFI API
+
+    [Link to Repo](https://github.com/yyoel/bfi_api)
+
+2. BFI Engine 1
+
+    [Link to Repo](https://github.com/yyoel/bfi_engine1)
+
+3. BFI Engine 2
+
+    [Link to Repo](https://github.com/yyoel/bfi_engine2)
+
+4. To run the apps start by doing
+    - > mvn package
+    - > java -jar /target/*.jar
