@@ -13,11 +13,7 @@
     - Run BFI_Engine1
     - Run BFI_Engine2
 
----
-
 ## Step by step
-
----
 
 1. Go to **Compute Engine** and **Create Instance**
 
